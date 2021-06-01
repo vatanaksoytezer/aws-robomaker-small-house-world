@@ -5,14 +5,14 @@
 
       <inertial>
         <mass>6</mass>
-          <inertia>
+          <!-- <inertia>
             <ixx>0.02</ixx>
             <ixy>0</ixy>
             <ixz>0</ixz>
             <iyy>0.04</iyy>
             <iyz>0</iyz>
             <ixx>0.02</ixx>
-          </inertia>
+          </inertia> -->
       </inertial>
 
       <collision name="collision">
