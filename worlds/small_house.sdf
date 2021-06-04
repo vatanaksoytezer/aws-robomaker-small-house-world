@@ -2,9 +2,17 @@
 
 <sdf version='1.6'>
   <world name='default'>
-    <physics name="1ms" type="ignored">
+    <gravity>0 0 -9.8</gravity>
+    <physics name="1ms" type="dart">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
+      <max_contacts>100</max_contacts>
+      <!-- <ode>
+        <max_contacts>100</max_contacts>
+        <constaints>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constaints>
+      </ode> -->
     </physics>
 
     <plugin
@@ -84,16 +92,15 @@
       </link>
     </model>
 
-    <!-- <include>
-      <uri>
-        https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Table
-      </uri>
-      <name>table2</name>
-      <pose>1.0 0 0 0 0 1.5708</pose>
-    </include>
+    <!-- Extras -->
+    <!-- Kitchen table location-->
+    <!-- 6.55269 0.951173 -0.000006 0 -0 -1.564130 -->
+
+    <!-- Coffee table location -->
+    <!-- 1.512301 -1.733438 0.041983 0.000000 0.000000 0.01000 -->
 
     <model name="cylinder">
-      <pose>0.8 0 1.025 0 0 0</pose>
+      <pose>1.212301 -1.533438 0.381983 1.57 0.0 0.0</pose>
       <link name="link">
         <inertial>
           <mass>0.1</mass>
@@ -123,8 +130,40 @@
           </geometry>
         </visual>
       </link>
-    </model> -->
+    </model> 
 
+    <model name="box">
+      <pose>1.312301 -1.533438 0.381983 0.000000 0.000000 0.0</pose>
+      <link name="link">
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.00389124</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000518939</iyy>
+            <iyz>0</iyz>
+            <izz>0.00389926</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.05</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.05</size>
+            </box>
+          </geometry>
+        </visual>
+      </link>
+    </model> 
+
+    <!-- AWS -->
     <model name='AirconditionerA_01_001'>
           <static>true</static>
           <include>
