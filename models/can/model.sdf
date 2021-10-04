@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <sdf version="1.6">
-  <model name='Coke'>
+  <model name='Can'>
     <static>true</static>
     <link name="body">
       <pose>0 0 0 0 0 0</pose>
