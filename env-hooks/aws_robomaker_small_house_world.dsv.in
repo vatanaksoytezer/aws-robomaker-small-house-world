@@ -1,0 +1,3 @@
+prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/aws_robomaker_small_house_world/worlds
+prepend-non-duplicate;IGN_GAZEBO_RESOURCE_PATH;share/aws_robomaker_small_house_world/models
+set-if-unset;MESA_GL_VERSION_OVERRIDE;3.3

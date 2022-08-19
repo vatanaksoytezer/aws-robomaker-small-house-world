@@ -8,6 +8,8 @@ install(DIRECTORY launch models worlds maps photos param routes
     DESTINATION share/${PROJECT_NAME}
 )
 
+ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/${PROJECT_NAME}.dsv.in")
+
 ament_export_dependencies(gazebo_ros)
 
 ament_package()
